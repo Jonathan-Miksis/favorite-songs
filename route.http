@@ -16,15 +16,12 @@ Content-Type: application/json
 }
 
 ###
-PATCH http://localhost:3000/songs/1.json
+PATCH http://localhost:3000/songs/4.json
 Content-Type: application/json
 
 {
-  "title": "She Got the Best of Me",
-  "album": "This One's For You",
-  "artist": "Luke Combs",
-  "year": 2017
+  "album": "Patrick Droney"
 }
 
 ###
-DELETE http://localhost:3000/songs/3
+DELETE http://localhost:3000/songs/1

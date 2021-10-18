@@ -21,10 +21,10 @@ class SongsController < ApplicationController
 
   def update
     song = Song.find_by(id: params[:id])
-    song.title = params[:title]
-    song.album = params[:album]
-    song.artist = params[:artist]
-    song.year = params[:year]
+    song.title = params[:title] || song.title
+    song.album = params[:album] || song.album
+    song.artist = params[:artist] || song.artist
+    song.year = params[:year] || song.year
     song.save
     render json: song.as_json
   end
@@ -34,6 +34,5 @@ class SongsController < ApplicationController
     song.destroy
     render json: {message: "You have successfully removed this song from your library."}
   end
-
 
 end
