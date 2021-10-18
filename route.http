@@ -1,1 +1,30 @@
 GET http://localhost:3000/songs
+
+###
+
+GET http://localhost:3000/songs/3
+
+###
+POST http://localhost:3000/songs
+Content-Type: application/json
+
+{
+  "title": "Drink a Beer",
+  "album": "Crash My Party",
+  "artist": "Luke Bryan",
+  "year": 2013
+}
+
+###
+PATCH http://localhost:3000/songs/1.json
+Content-Type: application/json
+
+{
+  "title": "She Got the Best of Me",
+  "album": "This One's For You",
+  "artist": "Luke Combs",
+  "year": 2017
+}
+
+###
+DELETE http://localhost:3000/songs/3
